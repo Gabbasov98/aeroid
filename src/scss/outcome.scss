@@ -1,0 +1,116 @@
+.outcome {
+    padding: 60px 0;
+    overflow: hidden;
+    &__title {
+        max-width: 781px;
+    }
+    &__slider {
+        margin-top: 60px;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background: #FFFFFF;
+        border: 1px solid #EEF2F6;
+        box-shadow: 0px 14px 24px rgba(213, 229, 244, 0.3);
+        border-radius: 10px;
+    }
+    &__subtitle {
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 150%;
+    }
+    &__desc {
+        font-size: 17px;
+        p {
+            line-height: 150%;
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .outcome {
+        .swiper-wrapper {
+            display: block;
+            border: 2px solid #EEF2F7;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        &__row {
+            display: flex;
+            min-height: 140px;
+            &:not(:last-child) {
+                border-bottom: 2px solid #EEF2F7;
+            }
+            &:nth-child(odd) {
+                background: #F2FCFE;
+            }
+        }
+        &__left {
+            border-right: 2px solid #EEF2F7;
+            padding: 40px 50px;
+            width: 415px;
+            flex-shrink: 0;
+            @media screen and (max-width: 1200px) {
+                width: 370px;
+                padding: 20px 30px;
+            }
+        }
+        &__right {
+            flex-grow: 1;
+            padding: 36px 73px;
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: 1200px) {
+                padding: 20px 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .outcome {
+        padding: 30px 0;
+        &__row {
+            background: #F4FAFF;
+            padding: 36px 25px;
+            border: 1px solid rgba(193, 223, 230, 0.7);
+            border-radius: 30px;
+            height: auto;
+        }
+        &__slider {
+            margin-top: 42px;
+        }
+        &__right {
+            margin-top: 30px;
+        }
+        &__icon {
+            margin-right: 15px;
+        }
+        &__subtitle {
+            font-size: 17px;
+            line-height: 140%;
+        }
+        &__desc {
+            font-size: 15px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+    }
+}

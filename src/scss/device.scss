@@ -1,0 +1,75 @@
+@import "vars";
+.device {
+    padding: 60px 0;
+    &__title {
+        max-width: 825px;
+    }
+    &__slider {
+        overflow: hidden;
+        width: 473px;
+        margin: 70px auto 0;
+        max-width: 100%;
+        position: relative;
+    }
+    .swiper-pagination {
+        position: absolute;
+        width: 100%;
+        bottom: 120px;
+        left: 0;
+        &-bullet {
+            width: 7.8px;
+            height: 7.8px;
+        }
+    }
+    &__item {
+        padding: 80px 20px 40px;
+        background: #FAFAFA;
+        border-radius: 16.6013px;
+    }
+    &__img {
+        height: 368px;
+        img {
+            height: 100%;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        margin-top: 90px;
+        color: $dark;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .device {
+        padding: 30px 0;
+        &__slider {
+            margin-top: 36px;
+        }
+        &__item {
+            padding: 50px 20px 46px;
+        }
+        &__img {
+            max-height: 235px;
+        }
+        &__subtitle {
+            margin-top: 57px;
+            font-size: 12.6582px;
+        }
+        .swiper-pagination {
+            bottom: 80px;
+            &-bullet {
+                width: 4.94px;
+                height: 4.94px;
+                &:not(:last-child) {
+                    margin-right: 8px !important;
+                }
+            }
+        }
+    }
+}

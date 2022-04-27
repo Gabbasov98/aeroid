@@ -1,0 +1,197 @@
+@import "vars";
+.about {
+    padding: 60px 0;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 420px;
+        flex-shrink: 0;
+        margin-right: 120px;
+    }
+    &__right {
+        flex-grow: 1;
+        img {
+            width: 100%;
+            border-radius: 20px;
+            display: block;
+        }
+    }
+    &__desc {
+        font-size: 19px;
+        margin-top: 38px;
+        p {
+            line-height: 170%;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &__img {
+        margin-top: 80px;
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        &-info {
+            width: 560px;
+            position: absolute;
+            top: 55px;
+            right: 55px;
+            padding: 35px 45px;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 150%;
+            color: $blue;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            transform: rotate(3deg);
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+    &__items {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 50% calc(44% - 100px);
+        gap: 100px;
+    }
+    &__item {
+        display: flex;
+        &-icon {
+            background: #F2FCFE;
+            border: 2px solid #DDF9FF;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            margin-right: 40px;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        &-title {
+            font-size: 19px;
+            line-height: 170%;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .about {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .about {
+        &__left {
+            margin-right: 40px;
+            width: 380px;
+        }
+        &__items {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about {
+        padding: 30px 0;
+        &__wrap {
+            flex-wrap: wrap;
+            padding-top: 80px;
+            position: relative;
+        }
+        &__right {
+            order: -1;
+            width: 100%;
+        }
+        &__left {
+            width: 100%;
+            margin-top: 26px;
+        }
+        &__title {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &__desc {
+            margin: 0;
+        }
+        &__img {
+            margin-top: 57px;
+            &-info {
+                font-size: 15px;
+                width: 400px;
+                padding: 16px 21px;
+                top: -25px;
+                right: 50%;
+                background: #F3FDFF;
+                border-radius: 13.2484px;
+                color: #007397;
+                transform: translateX(50%) rotate(3deg);
+            }
+            img {
+                min-height: 200px;
+                object-fit: cover;
+            }
+        }
+        &__items {
+            margin-top: 33px;
+        }
+        &__item {
+            &-title {
+                font-size: 14px;
+            }
+            &-icon {
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+                img {
+                    width: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about {
+        &__wrap {
+            padding-top: 73px;
+        }
+        &__desc {
+            font-size: 14px;
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        &__item {
+            display: block;
+            &-icon {
+                margin: 0 0 20px;
+            }
+        }
+        &__img {
+            &-info {
+                width: 250px;
+                font-size: 9.71549px;
+            }
+        }
+    }
+}

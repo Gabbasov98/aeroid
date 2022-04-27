@@ -1,0 +1,119 @@
+@import "vars";
+.accessory {
+    margin-top: 60px;
+    position: relative;
+    padding: 75px 0 90px;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        background: #F7F7F7;
+        backdrop-filter: blur(71.634px);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    &__slider {
+        margin-top: 65px;
+    }
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+}
+
+.accessory-card {
+    padding: 36px 25px 25px;
+    border: 0.446813px solid rgba(56, 78, 112, 0.12);
+    border-radius: 9.89827px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        &::before {
+            background: $blue;
+        }
+        & * {
+            color: #fff;
+        }
+    }
+    &>* {
+        position: relative;
+        z-index: 2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        background: #FFFFFF;
+        backdrop-filter: blur(28.705px);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    &__img {
+        height: 145px;
+        display: block;
+        img {
+            display: block;
+            margin: 0 auto;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    &__title {
+        display: block;
+        margin-top: 23px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 130%;
+        color: $dark;
+    }
+    &__desc {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 160%;
+        margin-top: 13px;
+    }
+    &__prices {
+        padding-top: 28px;
+        margin-top: auto;
+        &-old {
+            font-size: 12px;
+            line-height: 130%;
+            color: $dark;
+            text-decoration-line: line-through;
+        }
+        &-new {
+            font-weight: 600;
+            font-size: 22.0183px;
+            line-height: 130%;
+            margin-top: 5px;
+            color: $blue;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .accessory {
+        margin-top: 30px;
+        padding: 35px 0 45px;
+        &__slider {
+            margin-top: 35px;
+        }
+    }
+}

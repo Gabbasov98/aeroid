@@ -1,0 +1,130 @@
+@import "vars";
+.concept {
+    overflow: hidden;
+    padding: 60px 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 437px;
+        flex-shrink: 0;
+    }
+    &__right {
+        margin-left: 30px;
+        width: 550px;
+        max-width: calc(100% - 470px);
+    }
+    &__img {
+        position: relative;
+        &-marker {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            background: rgba(242, 252, 254, 0.2);
+            border: 10px solid #DAF7FD;
+            backdrop-filter: blur(24px);
+            border-radius: 50%;
+            top: 20%;
+            right: 12%;
+            transition: all .225s;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__desc {
+        font-size: 19px;
+        line-height: 170%;
+        margin-top: 40px;
+        max-width: 478px;
+    }
+    &__slider {
+        margin-top: 65px;
+    }
+    &__item {
+        padding: 40px 50px;
+        background: #F2FCFE;
+        border: 2px solid #DAF7FD;
+        border-radius: 20px;
+        min-height: 200px;
+        display: flex;
+        color: $dark;
+        &-num {
+            font-weight: 700;
+            font-size: 50px;
+            margin-right: 30px;
+        }
+        &-title {
+            font-size: 22px;
+            line-height: 160%;
+            strong {
+                font-weight: 600;
+            }
+        }
+    }
+    .swiper-slide {
+        opacity: 0;
+        &-active {
+            opacity: 1;
+            &~.swiper-slide {
+                opacity: 0.5;
+                background: #DAF7FD;
+                filter: blur(14px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .concept {
+        padding: 30px 0;
+        &__inner {
+            flex-wrap: wrap;
+            position: relative;
+            padding-bottom: 220px;
+        }
+        &__left {
+            margin: 42px auto 0;
+            max-width: 100%;
+        }
+        &__right {
+            order: -1;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
+        &__desc {
+            margin-top: 35px;
+        }
+        &__slider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .concept {
+        &__desc {
+            font-size: 14px;
+        }
+        &__item {
+            min-height: 180px;
+            padding: 24px 32px;
+            display: block;
+            &-num {
+                display: block;
+                font-size: 32.9188px;
+                line-height: 100%;
+            }
+            &-title {
+                font-size: 14px;
+                margin-top: 11px;
+                display: block;
+            }
+        }
+    }
+}

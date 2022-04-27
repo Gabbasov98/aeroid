@@ -1,0 +1,211 @@
+.info {
+    margin-top: 190px;
+    overflow: hidden;
+    padding-bottom: 60px;
+    &__inner {
+        display: flex;
+    }
+    &__left {
+        width: 50%;
+        padding-right: 50px;
+        padding-top: 75px;
+    }
+    &__right {
+        width: 50%;
+        overflow: hidden;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 70px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        color: $blue;
+        width: calc(100% + 200px);
+        position: relative;
+        z-index: 3;
+    }
+    &__desc {
+        margin-top: 60px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 170%;
+    }
+    .swiper-slide {
+        background: #F6F6F6;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 70px 0;
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        background: #FFFFFF;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        margin-right: 17px;
+        margin-top: 0;
+    }
+    &__slider {
+        position: relative;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 36px;
+        bottom: 64px;
+    }
+    &__items {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 45px 20px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+        &-icon {
+            width: 60px;
+            height: 60px;
+            background: #F6F6F6;
+            border-radius: 20px;
+            border: 2px solid #FFFFFF;
+            flex-shrink: 0;
+            margin-right: 40px;
+        }
+        &-title {
+            font-size: 19px;
+            line-height: 170%;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            max-width: 340px;
+        }
+        &:nth-child(5) {
+            grid-column: 2/4;
+            max-width: 480px;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .info {
+        margin-top: 100px;
+        &__title {
+            font-size: 58px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .info {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__item {
+            &:nth-child(5) {
+                grid-column: 1/3;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .info {
+        margin-top: 60px;
+        padding-bottom: 30px;
+        &__inner {
+            display: block;
+        }
+        &__left {
+            width: 100%;
+            padding: 0;
+        }
+        &__right {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__title {
+            font-size: 44px;
+            width: 100%;
+        }
+        &__desc {
+            font-size: 18px;
+            margin-top: 35px;
+        }
+        &__nav {
+            bottom: 30px;
+            left: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info {
+        .swiper-slide {
+            padding: 45px 0;
+            img {
+                max-height: 400px;
+            }
+        }
+        &__right {
+            overflow: unset;
+        }
+        &__nav {
+            bottom: unset;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 15px;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            background: #f6f6f6;
+        }
+        &__items {
+            margin-top: 80px;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        &__item {
+            max-width: 100% !important;
+            &:nth-child(5) {
+                grid-column: 1/2;
+            }
+            &-icon {
+                margin-right: 20px;
+            }
+            &-title {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .info {
+        margin-top: 30px;
+        .swiper-slide {
+            padding: 30px 0;
+            img {
+                max-height: 300px;
+            }
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__desc {
+            font-size: 16px;
+            margin-top: 15px;
+            line-height: 130%;
+        }
+    }
+}
