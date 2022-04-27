@@ -14,6 +14,10 @@ function conceptSlider() {
     var swiper = new Swiper('.concept .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 35,
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+        },
     })
     swiper.on('slideChange', function() {
         const index_currentSlide = swiper.realIndex;
@@ -46,6 +50,10 @@ function knowSlider() {
     var swiper = new Swiper('.know .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 37,
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+        },
         pagination: {
             el: '.know .swiper-pagination',
             type: 'bullets',
@@ -84,6 +92,10 @@ function deviceSlider() {
     var swiper = new Swiper('.device .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 37,
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+        },
         pagination: {
             el: '.device .swiper-pagination',
             type: 'bullets',
